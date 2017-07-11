@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600157FD1EF79E1700337B67 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600157FC1EF79E1700337B67 /* WebViewController.swift */; };
+		6009DF3B1EE642EC0003CA54 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6009DF3A1EE642EC0003CA54 /* LocationViewController.swift */; };
+		603264371EE232B300AFE6C3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603264361EE232B300AFE6C3 /* TabBarController.swift */; };
+		603264391EE2874100AFE6C3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603264381EE2874100AFE6C3 /* ImageViewController.swift */; };
 		60565C511ED778A200CD1B99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60565C501ED778A200CD1B99 /* AppDelegate.swift */; };
 		60565C531ED778A300CD1B99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60565C521ED778A300CD1B99 /* ViewController.swift */; };
 		60565C561ED778A300CD1B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60565C541ED778A300CD1B99 /* Main.storyboard */; };
 		60565C581ED778A300CD1B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60565C571ED778A300CD1B99 /* Assets.xcassets */; };
 		60565C5B1ED778A300CD1B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60565C591ED778A300CD1B99 /* LaunchScreen.storyboard */; };
+		60CE4ED71EE13BA200390597 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CE4ED61EE13BA200390597 /* ViewController3.swift */; };
+		60DB21D91EE4A960009CD425 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB21D81EE4A960009CD425 /* SlideViewController.swift */; };
+		60DB21DB1EE50280009CD425 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB21DA1EE50280009CD425 /* RegisterViewController.swift */; };
+		60EA27031F09E61F00AD2B89 /* FiltrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA27021F09E61F00AD2B89 /* FiltrarViewController.swift */; };
+		60EA27051F0A360A00AD2B89 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EA27041F0A360A00AD2B89 /* ReportViewController.swift */; };
+		60FA4F231EF2206D005EFE2D /* imagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FA4F221EF2206D005EFE2D /* imagenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		600157FC1EF79E1700337B67 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		6009DF3A1EE642EC0003CA54 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		603264361EE232B300AFE6C3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		603264381EE2874100AFE6C3 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		60565C4D1ED778A200CD1B99 /* Essbio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Essbio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60565C501ED778A200CD1B99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60565C521ED778A300CD1B99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +36,12 @@
 		60565C571ED778A300CD1B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60565C5A1ED778A300CD1B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60565C5C1ED778A300CD1B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60CE4ED61EE13BA200390597 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		60DB21D81EE4A960009CD425 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideViewController.swift; path = ../../../../../../../../../Users/matias/Desktop/Essbio/Essbio/SlideViewController.swift; sourceTree = SDKROOT; };
+		60DB21DA1EE50280009CD425 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		60EA27021F09E61F00AD2B89 /* FiltrarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltrarViewController.swift; sourceTree = "<group>"; };
+		60EA27041F0A360A00AD2B89 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		60FA4F221EF2206D005EFE2D /* imagenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imagenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +76,20 @@
 			children = (
 				60565C501ED778A200CD1B99 /* AppDelegate.swift */,
 				60565C521ED778A300CD1B99 /* ViewController.swift */,
+				60DB21DA1EE50280009CD425 /* RegisterViewController.swift */,
+				60DB21D81EE4A960009CD425 /* SlideViewController.swift */,
+				60CE4ED61EE13BA200390597 /* ViewController3.swift */,
+				6009DF3A1EE642EC0003CA54 /* LocationViewController.swift */,
+				603264361EE232B300AFE6C3 /* TabBarController.swift */,
+				600157FC1EF79E1700337B67 /* WebViewController.swift */,
 				60565C541ED778A300CD1B99 /* Main.storyboard */,
+				603264381EE2874100AFE6C3 /* ImageViewController.swift */,
 				60565C571ED778A300CD1B99 /* Assets.xcassets */,
 				60565C591ED778A300CD1B99 /* LaunchScreen.storyboard */,
 				60565C5C1ED778A300CD1B99 /* Info.plist */,
+				60FA4F221EF2206D005EFE2D /* imagenViewController.swift */,
+				60EA27021F09E61F00AD2B89 /* FiltrarViewController.swift */,
+				60EA27041F0A360A00AD2B89 /* ReportViewController.swift */,
 			);
 			path = Essbio;
 			sourceTree = "<group>";
@@ -138,7 +168,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				60565C531ED778A300CD1B99 /* ViewController.swift in Sources */,
+				603264371EE232B300AFE6C3 /* TabBarController.swift in Sources */,
+				60DB21DB1EE50280009CD425 /* RegisterViewController.swift in Sources */,
+				600157FD1EF79E1700337B67 /* WebViewController.swift in Sources */,
+				60EA27031F09E61F00AD2B89 /* FiltrarViewController.swift in Sources */,
+				60DB21D91EE4A960009CD425 /* SlideViewController.swift in Sources */,
+				603264391EE2874100AFE6C3 /* ImageViewController.swift in Sources */,
 				60565C511ED778A200CD1B99 /* AppDelegate.swift in Sources */,
+				60EA27051F0A360A00AD2B89 /* ReportViewController.swift in Sources */,
+				60CE4ED71EE13BA200390597 /* ViewController3.swift in Sources */,
+				6009DF3B1EE642EC0003CA54 /* LocationViewController.swift in Sources */,
+				60FA4F231EF2206D005EFE2D /* imagenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +344,7 @@
 				60565C611ED778A300CD1B99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
