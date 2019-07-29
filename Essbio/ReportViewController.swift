@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReportViewController: UIViewController, UITextFieldDelegate {
+class ReportViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     var token : String?
     
@@ -150,6 +150,7 @@ class ReportViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+   
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         moveTextField(textField, moveDistance: -75, up: true)

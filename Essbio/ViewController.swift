@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate  {
 
+    var userArray:[Entity] = []
     
  
 
     @IBOutlet weak var textField: UITextField!
-    
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var palabra: String?
     var toc : String = ""
+    
+    
+    
     
     
     
@@ -25,15 +30,35 @@ class ViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate  
     @IBOutlet weak var clave: UITextField!
     
     override func viewDidLoad() {
+       
+       
+       /* let newUser = NSEntityDescription.insertNewObject(forEntityName: "Entity", into: context)
+        newUser.setValue("17853344-4", forKey: "username")
+        newUser.setValue("cloud", forKey: "password")
+        
+        do {
+            
+            try context.save()
+            print("saved")
+        }
+        catch {
+            
+            print(error)
+        }
+ */
+        
+        
+      
         super.viewDidLoad()
         usuario.delegate = self 
         clave.delegate = self
        usuario.returnKeyType = UIReturnKeyType.done
         clave.returnKeyType = UIReturnKeyType.done
         
-        
-        
-        //post con el token 
+       
+        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
+    
       
         
         
@@ -41,6 +66,11 @@ class ViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate  
        
     }
     
+  
+    
+        
+    
+  
     func tokensiwi() {
         let paramater = ["username":usuario.text!, "password":clave.text!]
         
@@ -106,8 +136,8 @@ class ViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate  
                     
 
                     
-                    let alert = UIAlertController(title: "Login", message: "Datos Incorrectos", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                    let alert = UIAlertController(title: "Login", message: "Datos Incorrectos", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                     
                    self.present(alert, animated: true, completion: nil)
                       
@@ -115,7 +145,8 @@ class ViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate  
                 } else {
                 
                 self.toc = json.value(forKey: "access_token") as! String
-                
+             
+
                     self.performSegue(withIdentifier: "v", sender: self)
 
                     
@@ -140,7 +171,7 @@ class ViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate  
         
     }
     
-    
+
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if (string == "\n") {
@@ -173,10 +204,37 @@ class ViewController: UIViewController, UITextViewDelegate,UITextFieldDelegate  
         
     
    @IBAction func boletadatos(_ sender: Any) {
+  
+    
+    func fetchData(){
         
- 
-   
-   
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entity")
+        request.returnsObjectsAsFaults = false
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        do {
+            
+          let results = try context.fetch(Entity.fetchRequest())
+            if results.count > 0 {
+                
+                for result in results as! [NSManagedObject] {
+                    if let username = result.value(forKey: "username") as? String {
+                        
+                        print(username)
+                    }
+                    if let password = result.value(forKey: "password") as? String {
+                        
+                        print(password)
+                    }
+                }
+            
+            }
+            }
+            catch {
+            
+            print(error)
+        }
+    }
         
     tokensiwi()
 

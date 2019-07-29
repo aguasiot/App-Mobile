@@ -93,14 +93,6 @@ class ViewController3: UIViewController {
                      self.present(alert, animated: true, completion: nil)
                      */
                     
-                 
-              
-                
-                    
-                    
-                    
-        
-                    
                     print(json)
                     
                

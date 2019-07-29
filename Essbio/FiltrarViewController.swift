@@ -33,7 +33,12 @@ class FiltrarViewController: UIViewController, UITextFieldDelegate {
             textField.resignFirstResponder()
             return false
         }
-        return true
+        
+        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
+        let compSepByCharInSet = string.components(separatedBy: aSet)
+        let numberFiltered = compSepByCharInSet.joined(separator: "")
+        return string == numberFiltered
+        
     }
     
     
@@ -64,6 +69,8 @@ class FiltrarViewController: UIViewController, UITextFieldDelegate {
         self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
         UIView.commitAnimations()
     }
+    
+   
     
     @IBAction func filtrar(_ sender: Any) {
         
@@ -105,7 +112,16 @@ class FiltrarViewController: UIViewController, UITextFieldDelegate {
                      */
                     
                     
+                    let httpstatus = response as? HTTPURLResponse
                     
+                    
+                    
+                    
+                    
+                    
+                    var status = httpstatus!.statusCode.description
+                    
+                    print(status)
                     
                     
                     
@@ -115,20 +131,51 @@ class FiltrarViewController: UIViewController, UITextFieldDelegate {
                     print(json)
                     
                     
+                    
+                    switch status {
+                    
+                    case "200":
+                        
+                        let alert = UIAlertController(title: "Boleta", message: "Boleta Encontrada", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        let dact: Int? = json.value(forKey: "total") as! Int
+                        self.deudactual.text = dact!.description
+                        
+                        let  num: Int? = json.value(forKey: "id") as! Int
+                        self.numboleta.text = num!.description
+                        
+                        let  num2: Int? = json.value(forKey: "numero_servicio") as! Int
+                        self.numservicio.text = num2!.description
+                   
+                    case "404":
+                        
+                        let alert = UIAlertController(title: "Boleta", message: "La boleta no existe", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        
+                        
+                        
+                    default:
+                        
+                        let alert = UIAlertController(title: "Register", message: "Estamos en mantencion!", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+                        
+                        self.present(alert, animated: true, completion: nil)
+                    }
+
+                    
                     //   let  bol : String? = json.value(forKey: "fechaVencimiento") as? String
                     
                     // self.boleta.text = bol
                     
                     
                     
-                    let dact: Int? = json.value(forKey: "total") as! Int
-                    self.deudactual.text = dact!.description
-                    
-                    let  num: Int? = json.value(forKey: "id") as! Int
-                    self.numboleta.text = num!.description
-                    
-                    let  num2: Int? = json.value(forKey: "numero_servicio") as! Int
-                    self.numservicio.text = num2!.description
+                 
                     
                     // let serv: Int? = json.value(forKey: "servicio") as! Int
                     // self.servicio.text = serv!.description
